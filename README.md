@@ -33,22 +33,119 @@ Step 7: Save and run the application.
  ```
 /*
 Program to implement a Hello world Activity using all lifecycles methods using Android Studio .
-Developed by: 
-RegisterNumber:  
+Developed by: Bakkiya lakshmi M
+RegisterNumber:  212222220006
 */
 ```
 
 ## MainActivity.java:
+```
+package com.nextstep.application;
 
+import android.annotation.SuppressLint;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.Toast;
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
+public class MainActivity extends AppCompatActivity {
 
+    @SuppressLint("MissingInflatedId")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toast.makeText(getApplicationContext(), "onCreate Called", Toast.LENGTH_LONG).show();
+
+        // Your existing code can stay here
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(getApplicationContext(), "onStart Called", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(getApplicationContext(), "onResume Called", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(getApplicationContext(), "onPause Called", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast.makeText(getApplicationContext(), "onStop Called", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(getApplicationContext(), "onRestart Called", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(getApplicationContext(), "onDestroy Called", Toast.LENGTH_LONG).show();
+    }
+
+}
+```
 
 
 ## activitymain.xml:
+```
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
 
+    <!-- A simple TextView to display a message -->
+    <TextView
+        android:id="@+id/main_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, World!"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"/>
 
+    <!-- A Button that the user can press -->
+    <Button
+        android:id="@+id/main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click"
+        android:onClick="one1"
+        android:layout_gravity="center_horizontal"/>
+
+   
+
+</LinearLayout>
+```
 
 ## OUTPUT:
+![366541332-827556c3-c8c7-45d3-bbc8-d8e04bc5b621](https://github.com/user-attachments/assets/68776246-71d8-4c7f-b480-257671ad8dbd)
+![366541503-909e1182-efb0-4a4a-b287-9c0853afff69](https://github.com/user-attachments/assets/cadd4aac-66bd-47d8-b786-e561b59030d2)
+![366542755-f258a809-6add-4f69-9d5d-e568039366c1](https://github.com/user-attachments/assets/b50eaa89-84f9-4458-a382-068d80aca895)
+
 
 
 
